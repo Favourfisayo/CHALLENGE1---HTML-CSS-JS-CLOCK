@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge #1 - HTML, CSS, JS CLOCK</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="clock-container">
+        <div  class="event">
+            <div class="inputs">
+               Time: <input id = "time" type="text">
+               <button id = "set">set</button>
+            </div>
+        </div>
+        <div class="clockvals">
+        <div  id = "hours" ></div>
+        <div id = "minutes"></div>
+        <div  id = "seconds"></div>
+        </div>
+    </div>
+
+    <script>
+        function getDate() {
+      const date = new Date();
+
+      const hrs = date.getHours();
+
+      const mins = date.getMinutes();
+
+      const secs = date.getSeconds();
+
+    const hrbox = document.querySelector("#hours")
+    const mnbox = document.querySelector("#minutes");
+    const sebox = document.querySelector("#seconds");
+    
+   hrbox.innerHTML = hrs;
+   mnbox.innerHTML = mins;
+   sebox.innerHTML = secs;
+
+ }
+ setInterval(getDate, 1000);
+  
+
+    </script>
+</body>
+</html>
